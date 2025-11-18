@@ -71,16 +71,6 @@ public class HelloWorld {
 
         // Execute the graph
         System.out.println("Executing graph...\n");
-
-        // Invoke the graph and get the result
-        var result = app.invoke(initialState);
-
-        System.out.println("\n=== Graph Execution Complete ===");
-        if (result.isPresent()) {
-            AgentState finalState = result.get();
-            String message = (String) finalState.data().get("message");
-            System.out.println("Result: " + message);
-        }
     }
 }
 
